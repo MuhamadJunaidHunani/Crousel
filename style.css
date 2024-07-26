@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+    user-select: none;
+}
+
+.mainContainer {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainHdContainer {}
+
+.mainHd {
+    color: black;
+    font-family: cursive;
+    text-transform: uppercase;
+    font-size: 30px;
+    position: relative;
+    cursor: default;
+}
+
+.mainHd::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    bottom: 0;
+    left: 0;
+}
+
+.mainHd:hover::after {
+    animation-name: hoveranimation;
+    animation-duration: 0.7s;
+    animation-iteration-count: 2;
+}
+
+@keyframes hoveranimation {
+    0% {
+        width: 0px;
+        left: 0;
+    }
+
+    60% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0px;
+        left: 100%;
+    }
+}
+
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imgHoverContainer {
+    margin: 2.5vw;
+    width: 700px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+
+}
+
+.imgContainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.sliderPrevImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+}
+
+.sliderImage {
+    height: 100%;
+    width: 100%;
+    animation: slide 0.5s;
+    border-radius: 15px;
+}
+
+.sliderComingImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -100%;
+}
+
+.prevBtn,
+.nextBtn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(10, 10, 10);
+    font-size: 20px;
+    border-radius: 50%;
+    transition: 0.1s all ease-in-out;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+    background-color: rgb(21, 21, 21);
+    cursor: pointer;
+}
+
+.hoverContainer {
+    position: absolute;
+    bottom: 0;
+    height: 70%;
+    width: 100%;
+    background: rgb(231, 231, 231);
+    background: linear-gradient(transparent, black);
+    translate: 0 100%;
+    transition: 0.1S all ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.imgHoverContainer:hover .hoverContainer {
+    translate: 0;
+}
+
+.infoHd {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0 20px;
+}
+
+.infopara {
+    font-size: 18px;
+    margin: 10px 0 30px 20px;
+}
