@@ -97,11 +97,3 @@ nextBtn.addEventListener('click', function() {
     }
     SlideImage("next");
 });
-
-
-git init
-git add .
-git commit -m "Solve Transitioning effect"
-git branch -M main
-git remote add origin https://github.com/MuhamadJunaidHunani/Crousel.git
-git push -u origin main
