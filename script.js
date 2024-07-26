@@ -50,10 +50,10 @@ const infopara = document.querySelector(".infopara");
 const SlideImage = (direction) => {
     const currentImage = wonderArr[currentImgIndex];
     if(direction === 'next'){
-        sliderComingImage.style.transition = '0.4s';
+        sliderComingImage.style.transition = '0.3s';
         sliderComingImage.style.right = 0;
     } else {
-        sliderPrevImage.style.transition = '0.4s';
+        sliderPrevImage.style.transition = '0.3s';
         sliderPrevImage.style.left = 0;
     }
 
@@ -77,7 +77,7 @@ const SlideImage = (direction) => {
         sliderComingImage.style.right = '-100%';
         sliderPrevImage.style.transition = 'unset';
         sliderPrevImage.style.left = '-100%';
-    }, 400);
+    }, 300);
     
 };
 
